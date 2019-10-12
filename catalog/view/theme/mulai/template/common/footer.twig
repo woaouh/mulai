@@ -1,0 +1,47 @@
+<footer class="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-7 col-sm-5">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+					<li><a href="{{ contact }}">{{ text_contact }}</a></li>
+					<li>
+							{% if informations %}
+								<ul class="list-unstyled">
+								 {% for information in informations %}
+									<li><a href="{{ information.href }}">{{ information.title }}</a></li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+					</li>
+        </ul>
+			</div>
+
+      <div class="col-xs-5 col-sm-5">
+        <h5>{{ text_account }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+			</div>
+
+			<div class="col-sm-2">
+				<ul class="social-links">
+					<li><a href="https://instagram.com/mulai.me?igshid=ji57ttahlfku"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://www.facebook.com/Mul%C3%A1%C3%AD-101220747910842/"><i class="fa fa-facebook-square"></i></a></li>
+				</ul>
+			</div>
+
+    </div>
+  </div>
+</footer>
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</body></html>

@@ -1,0 +1,118 @@
+2019-09-04 13:54:24 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+2019-09-04 13:57:45 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: $loader = new \Twig_Loader_Filesystem(DIR_TEMPLATE);
+LINE: 19
+----------------------------------------------------------------
+MOD: Auto URL amigável Admin
+
+FILE: admin/controller/catalog/product.php
+CODE: $data['languages']
+LINE: 588
+
+FILE: admin/controller/catalog/category.php
+CODE: $data['languages']
+LINE: 359
+
+FILE: admin/controller/catalog/information.php
+CODE: $data['languages']
+LINE: 325
+
+FILE: admin/view/template/common/header.twig
+CODE: </head>
+LINE: 36
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: var attribute_row = {{ attribute_row }};
+LINE: 1302
+CODE: name="product_description[{{ language.language_id }}][name]"
+LINE: 52
+CODE: id="input-meta-title{{ language.language_id }}" class="form-control"
+LINE: 66
+CODE: name="product_seo_url[{{ store.store_id }}][{{ language.language_id }}]"
+LINE: 1063
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <script type="text/javascript">
+LINE: 275
+CODE: name="category_description[{{ language.language_id }}][name]"
+LINE: 46
+CODE: id="input-meta-title{{ language.language_id }}" class="form-control"
+LINE: 61
+CODE: name="category_seo_url[{{ store.store_id }}][{{ language.language_id }}]"
+LINE: 190
+
+FILE: admin/controller/catalog/manufacturer.php
+CODE: protected function getForm() {
+LINE: 248
+
+FILE: admin/view/template/catalog/manufacturer_form.twig
+CODE: {{ footer }}
+LINE: 129
+CODE: name="name"
+LINE: 35
+CODE: name="manufacturer_seo_url[{{ store.store_id }}][{{ language.language_id }}]"
+LINE: 85
+
+FILE: admin/view/template/catalog/information_form.twig
+CODE: <script type="text/javascript">
+LINE: 230
+CODE: name="information_description[{{ language.language_id }}][title]"
+LINE: 44
+CODE: id="input-meta-title{{ language.language_id }}" class="form-control"
+LINE: 60
+CODE: name="information_seo_url[{{ store.store_id }}][{{ language.language_id }}]"
+LINE: 147
+----------------------------------------------------------------

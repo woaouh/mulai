@@ -1,0 +1,8 @@
+<div class="sidebar information-block information-block-bottom hidden-sm hidden-md hidden-lg">
+  <ul class="nav nav-tabs nav-stacked">
+    {% for information in informations %}
+    <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+    {% endfor %}
+    <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+  </ul>
+</div>

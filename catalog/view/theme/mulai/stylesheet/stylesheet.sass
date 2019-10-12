@@ -1,0 +1,271 @@
+@import "bourbon"
+@import "vars"
+@import "fonts"
+
+body 
+	font-size: 16px
+	min-width: 320px
+	position: relative 
+	line-height: 1.6
+	overwflow: hidden
+	font-family: MyriadSetProText, sans-serif
+
+a
+	outline: none !important
+
+img 
+	width: 100%
+
+#content
+	.btn-primary,
+		background-color: $accent2
+		border-color: $accent2
+		outline: none
+		transition: background-color .25s ease, border-color .25s ease
+		&:hover, &:focus
+			border-color: $accent2
+			background-color: lighten($accent2, 8%)
+		&:active
+			background-color: $accent2
+			border-color: $accent2
+
+.alert, .alert-success, .alert-dismissible
+	margin-top: 30px
+
+header
+	background-color: $accent2
+	padding: 7px 0
+	#logo
+		width: 80px
+	.dropdown
+		a.dropdown-toggle
+			font-size: 16px
+			margin-top: 3px 0 0
+			padding: 12px 0 4px
+			display: block
+			color: $accent
+			transition: color .25s ease
+			&:hover, &:focus
+				color: lighten($accent, 15%)
+				text-decoration: none
+				background-color: transparent
+			&:active
+				color: $accent
+	.account-list
+		ul
+			float: right
+	.header-cart
+		a
+			color: $accent
+			transition: color .25s ease
+			&:hover, &:focus
+				color: lighten($accent, 15%)
+				text-decoration: none
+				background-color: transparent
+			&:active
+				color: $accent
+
+#content
+	margin-top: 50px
+	margin-bottom: 50px
+	h3
+		display: none
+	.product-layout
+		.product-thumb
+			margin-bottom: 30px
+			transition: box-shadow .25s ease, transform .25s ease
+			&:hover
+				box-shadow: #777 0 0 5px 1px
+				transform: translateY(-2px)
+		.caption
+			h4
+				padding-top: 5px
+				font-family: MyriadSetProSemiBold, sans-serif
+				text-align: center
+				a
+					font-size: 20px
+					color: #000
+					&:hover, &:active, &:focus
+						color: gray
+						text-decoration: none
+			p
+				display: none
+			.price
+				color: #c50b11
+				font-weight: bold
+				font-size: 16px
+				text-align: center
+				display: block
+				.price-old
+					font-size: 14px
+					color: #000
+					text-decoration: line-through
+					margin-left: 10px
+				.price-tax
+					display: none
+		.button-group
+			display: none
+
+.information-block
+	ul
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+	&-top
+		color: $accent
+		ul
+			border: none
+			padding-top: 3px
+			li
+				a 
+					font-size: 18px
+					color: $accent
+					font-family: MyriadSetProSemiBold, sans-serif
+					text-transform: uppercase
+					transition: color .25s ease
+					border: none
+					&:hover, &:focus
+						color: lighten($accent, 15%)
+						background-color: transparent
+						border: none
+					&:active
+						color: $accent
+	&-bottom
+		margin-top: 20px
+		margin-bottom: 30px
+		ul
+			a
+				font-size: 18px
+				color: #000000
+				font-family: MyriadSetProThin, sans-serif
+				text-transform: uppercase
+	li:nth-child(3)
+		display: none
+	
+.main-footer
+	background-color: $accent2
+	h5
+		font-size: 18px
+		font-family: MyriadSetProSemiBold, sans-serif
+		color: $accent
+		margin-top: 20px
+	.list-unstyled
+		list-style-type: none
+		margin-bottom: 10px
+		li
+			a
+				color: $accent
+				font-family: MyriadSetProThin, sans-serif
+				transition: color .25s ease
+				&:hover, &:focus
+					color: lighten($accent, 15%)
+				&:active
+					color: $accent
+	ul li ul li:nth-child(1),
+	ul li ul li:nth-child(2)
+		display: none
+	.social-links
+		display: flex
+		justify-content: space-around
+		margin-top: 50px
+		list-style-type: none
+		margin-bottom: 10px
+		li
+			margin-right: 30px
+			font-size: 36px
+			color: yellow
+			a
+				color: $accent
+				transition: color .25s ease
+				&:hover, &:focus
+					color: lighten($accent, 15%)
+				&:active
+					color: $accent
+
+.breadcrumb
+	display: none
+
+
+ //// Contact Us - Style
+	 
+#information-contact
+	.panel-body
+		display: none
+	legend
+		display: none
+
+//// Item - Style
+
+#product-product
+	.thumbnails
+		list-style-type: none
+		padding: 0
+		.thumbnail
+			border: none
+	.form-group
+		.control-label
+			display: none
+		.form-control
+			display: none
+	.btn-group-wrapper
+		button
+			margin: 0
+			display: inline-block
+		button:first-child
+			width: 80%
+		button:last-child
+			padding: 8px 5px
+			border-radius: 8px
+			background-color: $accent2
+			color: #fff
+			font-size: 20px
+			border: 1px solid $accent2
+			width: 18%
+	.rating
+		p
+			display: none
+	.nav-tabs
+		li:last-child
+			display: none
+	.addthis_toolbox
+		display: none
+				
+//// Account - Style
+
+#column-right
+	margin-top: 50px
+
+#account-login
+	.form-group
+		a 
+			color: #000
+			font-weight: bold
+			&:active
+				color: #000
+				text-decoration: none
+
+//// Checkout - Style
+
+#checkout-cart
+	.table-responsive
+		thead
+			font-size: 16px
+			font-family: MyriadSetProSemiBold, sans-serif
+		tbody
+			tr
+				td:nth-child(2)
+					a
+						font-size: 20px
+						color: #000
+	.panel-group
+		.panel-default:first-child
+			display: none
+
+
+
+		
+
+			
+
+@import "media"
