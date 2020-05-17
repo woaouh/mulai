@@ -7,7 +7,6 @@ body
 	min-width: 320px
 	position: relative 
 	line-height: 1.6
-	overwflow: hidden
 	font-family: MyriadSetProText, sans-serif
 
 a
@@ -16,27 +15,23 @@ a
 img 
 	width: 100%
 
-#content
-	.btn-primary,
-		background-color: $accent2
-		border-color: $accent2
-		outline: none
-		transition: background-color .25s ease, border-color .25s ease
-		&:hover, &:focus
-			border-color: $accent2
-			background-color: lighten($accent2, 8%)
-		&:active
-			background-color: $accent2
-			border-color: $accent2
+.breadcrumb
+	display: none
 
 .alert, .alert-success, .alert-dismissible
 	margin-top: 30px
 
-header
+///--- HEADER STYLE ---///
+
+#top
 	background-color: $accent2
 	padding: 7px 0
 	#logo
 		width: 80px
+		height: auto;
+	.account-list
+		.list-inline
+			float: right
 	.dropdown
 		a.dropdown-toggle
 			font-size: 16px
@@ -46,28 +41,97 @@ header
 			color: $accent
 			transition: color .25s ease
 			&:hover, &:focus
-				color: lighten($accent, 15%)
-				text-decoration: none
-				background-color: transparent
-			&:active
-				color: $accent
-	.account-list
-		ul
-			float: right
-	.header-cart
-		a
-			color: $accent
-			transition: color .25s ease
-			&:hover, &:focus
-				color: lighten($accent, 15%)
+				color: darken($accent, 15%)
 				text-decoration: none
 				background-color: transparent
 			&:active
 				color: $accent
 
+///--- CART STYLE ---///
+
+#cart
+	.btn
+		position: relative
+		background-color: transparent
+		color: $accent
+		transition: color .25s ease
+		&:hover, &:focus
+			color: darken($accent, 15%)
+		&:active
+			color: $accent
+	#cart-total
+		position: absolute
+		right: 2px
+		top: 4px
+		font-size: 10px
+		font-weight: bold
+		border: 2px solid #ff0000
+		background-color: #ff0000
+		border-radius: 50%
+		padding: 0px 5px
+	.dropdown-menu
+		width: 250px
+		padding: 5px
+		margin-top: 10px
+		.text-center
+			margin: 0
+		tr
+			background-color: #fff
+			td
+				padding: 10px 0
+				font-weight: bold
+				a 
+					color: #000000
+			td:nth-child(2)
+				padding-top: 18px
+				padding-right: 15px
+				padding-left: 20px
+			button
+				color: $accent
+				line-height: 1
+				border-color: $accent2
+				background-color: $accent2
+				padding: 10px 10px
+				outline: none
+				transition: color .25s ease, border-color .25s ease, background-color .25s ease
+				&:hover, &:focus
+					color: red
+					border-color: lighten($accent2, 8%)
+					background-color: lighten($accent2, 8%)
+				&:active
+					background-color: $accent2
+		.price-total-list
+			tr:first-child
+				display: none
+			td:last-child
+				padding-top: 10px
+		.cart-button-list
+			background-color: $accent2
+			padding: 10px 0
+			a
+				color: $accent
+				transition: color .25s ease
+				&:hover, &:focus
+					color: darken($accent, 15%)
+				&:active
+					color: $accent
+
+///--- CONTENT STYLE ---///
+
 #content
-	margin-top: 50px
-	margin-bottom: 50px
+	margin: 0
+	padding: 20px 15px
+	.btn-primary,
+		background-color: $accent2
+		border-color: $accent2
+		outline: none
+		transition: background-color .25s ease, border-color .25s ease
+		&:hover, &:focus
+			border-color: lighten($accent2, 8%)
+			background-color: lighten($accent2, 8%)
+		&:active
+			background-color: $accent2
+			border-color: $accent2
 	h3
 		display: none
 	.product-layout
@@ -75,7 +139,7 @@ header
 			margin-bottom: 30px
 			transition: box-shadow .25s ease, transform .25s ease
 			&:hover
-				box-shadow: #777 0 0 5px 1px
+				box-shadow: #777 0 0 8px 2px
 				transform: translateY(-2px)
 		.caption
 			h4
@@ -86,7 +150,7 @@ header
 					font-size: 20px
 					color: #000
 					&:hover, &:active, &:focus
-						color: gray
+						color: lighten(#000, 30%)
 						text-decoration: none
 			p
 				display: none
@@ -96,6 +160,7 @@ header
 				font-size: 16px
 				text-align: center
 				display: block
+				padding-bottom: 20px
 				.price-old
 					font-size: 14px
 					color: #000
@@ -105,6 +170,8 @@ header
 					display: none
 		.button-group
 			display: none
+
+///--- NAVIGATION STYLE ---///
 
 .information-block
 	ul
@@ -126,7 +193,7 @@ header
 					transition: color .25s ease
 					border: none
 					&:hover, &:focus
-						color: lighten($accent, 15%)
+						color: darken($accent, 15%)
 						background-color: transparent
 						border: none
 					&:active
@@ -142,24 +209,25 @@ header
 				text-transform: uppercase
 	li:nth-child(3)
 		display: none
+
+///--- FOOTER STYLE ---///
 	
 .main-footer
 	background-color: $accent2
+	padding: 20px 0
 	h5
 		font-size: 18px
 		font-family: MyriadSetProSemiBold, sans-serif
 		color: $accent
-		margin-top: 20px
 	.list-unstyled
 		list-style-type: none
-		margin-bottom: 10px
 		li
 			a
 				color: $accent
 				font-family: MyriadSetProThin, sans-serif
 				transition: color .25s ease
 				&:hover, &:focus
-					color: lighten($accent, 15%)
+					color: darken($accent, 15%)
 				&:active
 					color: $accent
 	ul li ul li:nth-child(1),
@@ -168,9 +236,8 @@ header
 	.social-links
 		display: flex
 		justify-content: space-around
-		margin-top: 50px
 		list-style-type: none
-		margin-bottom: 10px
+		line-height: 150px
 		li
 			margin-right: 30px
 			font-size: 36px
@@ -179,23 +246,11 @@ header
 				color: $accent
 				transition: color .25s ease
 				&:hover, &:focus
-					color: lighten($accent, 15%)
+					color: darken($accent, 15%)
 				&:active
 					color: $accent
 
-.breadcrumb
-	display: none
-
-
- //// Contact Us - Style
-	 
-#information-contact
-	.panel-body
-		display: none
-	legend
-		display: none
-
-//// Item - Style
+//// Item - Style ////
 
 #product-product
 	.thumbnails
@@ -222,6 +277,13 @@ header
 			font-size: 20px
 			border: 1px solid $accent2
 			width: 18%
+			outline: none
+			transition: background-color .25s ease, border-color .25s ease
+			&:hover, &:focus
+				border-color: lighten($accent2, 8%)
+				background-color: lighten($accent2, 8%)
+			&:active
+				background-color: $accent2
 	.rating
 		p
 			display: none
@@ -230,8 +292,31 @@ header
 			display: none
 	.addthis_toolbox
 		display: none
+
+//// Item-Description - Style ////
+
+#product-product
+	.nav-tabs
+		li
+			a
+				color: #000000
+				font-family: MyridaSetProSemiBold, sans-serif
+				transition: color .25s ease, border-color .25s ease, background-color .25s ease
+				&:hover, &:focus
+					color: $accent
+					border-color: 1px solid lighten($accent2, 10%)
+					background-color: lighten($accent2, 10%)
+				&:active
+					background-color: $accent2
+					border-color: $accent2
+		li.active a
+			background-color: $accent2
+			border: 1px solid $accent2
+			color: $accent
+	.tab-content
+		margin-top: 20px
 				
-//// Account - Style
+//// Account - Style ////
 
 #column-right
 	margin-top: 50px
@@ -245,7 +330,7 @@ header
 				color: #000
 				text-decoration: none
 
-//// Checkout - Style
+//// Checkout - Style ////
 
 #checkout-cart
 	.table-responsive
@@ -262,10 +347,46 @@ header
 		.panel-default:first-child
 			display: none
 
+ //// Contact Us - Style ////
+	 
+#information-contact
+	.panel-body
+		display: none
+	legend
+		display: none
 
+//// Alert - Style ////
 
-		
+.alert
+	color: $accent
+	background-color: $accent2
+	a
+		color: $accent
+		text-decoration: underline
+		transition: color .25s ease, text-decoration .25s ease
+		&:hover, &:focus
+			color: darken($accent, 8%)
+			text-decoration: none
+		&:active
+			color: $accent
 
-			
+/// About Us ///
+
+#information-information 
+	p 
+		img
+			width: 100%
+			min-width: 100%
+
+/// SLIDER STYLE ///
+
+#content
+	.swiper-viewport
+		border: none
+		box-shadow: none
+	.swiper-pagination
+		display: none
+	.swiper-button-next::before, .swiper-button-prev::before
+		font-size: 25px
 
 @import "media"

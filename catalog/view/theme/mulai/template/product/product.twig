@@ -44,7 +44,7 @@
             <div class="tab-pane active" id="tab-description">{{ description }}</div>
             {% if attribute_groups %}
             <div class="tab-pane" id="tab-specification">
-              <table class="table table-bordered">
+              <table class="table">
                 {% for attribute_group in attribute_groups %}
                 <thead>
                   <tr>
@@ -407,7 +407,7 @@ $('#button-cart').on('click', function() {
 			if (json['success']) {
 				$('.breadcrumb').after('<div class="alert alert-success alert-dismissible">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-				$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+				$('#cart > button').html('<i class="fa fa-shopping-cart"></i> <span id="cart-total">' + json['total'] + '</span>');
 
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
 
